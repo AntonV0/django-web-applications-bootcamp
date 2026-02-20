@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Contact Page</title>
+    <style>
+        #form_data {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+        }
+        input{
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<h2>Contact Details</h2>
+<div id = "form_data">
+<form method = "post" action = "{% url 'contact1' %}">
+    {% csrf_token %}
+    <label>Name: </label>
+    <input type = "text" name = "name" id = "name"><br/>
+    <label>Age: </label>
+    <input type = "number" name = "age" id = "age"><br/>
+    <label>Email: </label>
+    <input type = "email" name = "email" id = "email"><br/>
+    <input type = "submit" value = "Submit">
+</form>
+</div>
+<div style = "margin-left: 40px;">
+    <h3>Form Submitted! Your details:</h3>
+    <h3>{{ username }}</h3>
+    <h3>{{ age }}</h3>
+    <h3>{{ email }}</h3>
+</div>
 </body>
 </html>
