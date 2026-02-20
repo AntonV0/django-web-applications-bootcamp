@@ -1,0 +1,113 @@
+/* =========================
+   RESET (CSS reset is a set of rules that resets the styling of all HTML elements to a consistent baseline,
+   eliminating browser inconsistencies and providing a clean slate for styling)
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* =========================
+   CONTAINERS (Containers are used to group and structure content on a webpage, providing a consistent layout and
+   styling for the elements within them)
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid blue;
+}
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border: 3px solid #e0e0e0;
+
+    height: 120px;
+}
+
+/* Logo (image + text on one line, vertically centered) */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #111;
+}
+
+.logo img {
+    height: auto;
+    width: auto;
+    display: block;
+    border: 1px black solid;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border: #4ac1f7 solid 3px;
+    height: 100%;
+    padding: 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    width: 550px;
+    gap: 0;
+    height: 100%;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 18px;
+}
+
+.nav-list li {
+    height: 100%;
+    border: 2px solid green;
+    padding: 50px 35px;
+}
+
+
+/* =========================
+    MAIN CONTENT
+========================= */
+
+body {
+    margin: 0 auto;
+    border: 2px solid red;
+}

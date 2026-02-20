@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{# This is the home page template. It extends the base template and fills in the content block. #}
+{% extends "base.html" %}
+
+{# The block title is used to set the title of the page. It overrides the default title defined in the base template. #}
+{% block title %}Home | Level Hotel{% endblock %}
+
+{% block content %}
+  <h1>Home page</h1>
+{% endblock %}

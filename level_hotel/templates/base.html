@@ -1,10 +1,68 @@
+<!-- Load static is required to use the static template tag in Django templates. -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <!-- meta tags are used to provide metadata about the HTML document. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO placeholders -->
+    <meta name="description" content="{% block meta_description %}Level Hotel Website (Bootcamp Project){% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}hotel, booking, rooms, bootcamp{% endblock %}">
+
+    <!-- block title is used to define a block of content that can be overridden in child templates. -->
+    <!-- endblock title is used to indicate the end of the block content. -->
+    <title>{% block title %}Level Hotel{% endblock %}</title>
+
+    <!-- Global CSS: Link using the static template tag. -->
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+
+    <!-- Specific CSS: Link using the static template tag. -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
 </head>
 <body>
-$END$
+
+    <!-- Header/Nav -->
+    <header class="site-header">
+        <div class="container header-inner">
+          <!-- This href is using the url template tag to generate a URL for the 'home' view. -->
+            <a class="logo" href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Level Hotel Logo">
+                <span class="logo-text">Level Hotels</span>
+            </a>
+
+            <nav class="site-nav">
+                <ul class="nav-list">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Optional Header/Nav for Mobile-->
+            {% block mobile_nav %}{% endblock %}
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="site-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+          {% block footer %}
+              <!-- % now "Y" is a Django template tag that outputs the current year. -->
+              <p>{% now "Y" %} Copyright &copy; 2026 Level Hotels - Cloned by Anton Vlasenko - Original design by Tooplate</p>
+          {% endblock %}
+        </div>
+    </footer>
 </body>
 </html>
