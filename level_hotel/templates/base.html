@@ -60,7 +60,14 @@
         <div class="container footer-inner">
           {% block footer %}
               <!-- % now "Y" is a Django template tag that outputs the current year. -->
-              <p>{% now "Y" %} Copyright &copy; 2026 Level Hotels - Cloned by Anton Vlasenko - Original design by Tooplate</p>
+              <p>Copyright &copy; {% now "Y" %} Level Hotels&nbsp; - &nbsp;Cloned by:&nbsp;
+                  <a href="https://github.com/AntonV0">
+                      Anton Vlasenko
+                  </a>&nbsp; - &nbsp; Original design by:&nbsp;
+                  <a href="https://www.tooplate.com/live/2095_level" target="_blank" rel="noopener">
+                      Tooplate
+                  </a>
+              </p>
           {% endblock %}
         </div>
     </footer>

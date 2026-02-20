@@ -118,3 +118,34 @@ header {
 body {
     margin: 0 auto;
 }
+
+/* =========================
+    FOOTER
+========================= */
+
+footer {
+    background-color: #1f3646;
+    color: #333333;
+    text-align: center;
+    padding: 24px;
+}
+
+.site-footer {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #ffffff;
+}
+
+.site-footer a {
+    color: #ed5057;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #9e2f31;
+}
