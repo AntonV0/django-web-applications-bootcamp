@@ -1,8 +1,14 @@
 """Lesson Notes - Setting up a Django Project"""
 
 # ! cmd to create project --> django-admin startproject django_project_name
+
+# ! Activate virtual environment --> env_name\Scripts\activate
 # ! To run a django project --> python manage.py runserver
 # ! To create an app --> python manage.py startapp app_name
+
+# ? CLI Commands for Live Server:
+# python manage.py runserver --> runs the development server on the default port 8000.
+#
 
 # manage.py --> is a command line utility that helps you run Django related tasks.
 # It is automatically created when you start a new Django project.
@@ -117,7 +123,7 @@
 # validators as needed.
 
 # LANGUAGE_CODE = 'en-us' - is a string representing the language code for this installation. This is used for
-# internationalization and localization. You can change this to use a different language code.
+# internationalisation and localisation. You can change this to use a different language code.
 # For UK English, you would use 'en-gb'.
 
 # STATIC_URL = 'static/' - is a string representing the URL to use when referring to static files (CSS, JavaScript,
@@ -190,3 +196,39 @@
 
 # urls.py --> is where you define the URL patterns for your app. This is where you can specify the URLs that will be
 # handled by your app and the views that will be called when those URLs are accessed.
+
+# ? --------------------------------------------------------------------------------------------------------------------
+
+# ? DTL is the django template language - a presentation-layer language
+# It's used to display dynamic data in html
+# It allows us to use:
+# Show variables
+# Use loops
+# Use conditional statements
+# Extend templates
+# Use filters
+
+# ? --------------------------------------------------------------------------------------------------------------------
+
+# ? CSRF (Cross-Site Request Forgery) is a security vulnerability that allows an attacker to trick a user into
+#   performing actions on a web application without their consent.
+
+#  Django has built-in protection against CSRF attacks,
+#  which is enabled by default. When you use the {% csrf_token %} template tag in your forms, Django will generate a
+#  unique token for each form and include it as a hidden field. When the form is submitted, Django will check that the
+#  token is valid and matches the token stored in the user's session. If the token is missing or invalid, Django will
+#  reject the request and return a 403 Forbidden response. This helps to prevent CSRF attacks by ensuring that
+#  only legitimate requests from the user's browser are accepted by the server.
+
+# ? --------------------------------------------------------------------------------------------------------------------
+
+# ? Django Admin Panel:
+
+# To stop the server (to make changes to code and restart):
+# Press Ctrl + C in the terminal where the server is running.
+# python manage.py makemigrations
+# python manage.py migrate
+
+# To create credentials for Admin panel:
+# python manage.py createsuperuser
+# python manage.py runserver
