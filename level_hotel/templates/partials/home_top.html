@@ -1,0 +1,118 @@
+<section class="hero-section">
+    <div class="hero-inner">
+        <form class="booking-form" action="{% url 'home' %}" method="get">
+            {# Row 1 #}
+            <div class="booking-row">
+                {# Destination #}
+                <div class="booking-field">
+                    <i class="fa fa-map-marker form-icon"></i>
+                    <input type="text" name="destination" placeholder="Type your destination..." class="booking-input" required>
+                </div>
+                {# Check-in Date #}
+                <div class="booking-field">
+                    <i class="fa fa-calendar form-icon"></i>
+                     <input type="text" name="checkin" class="booking-input js-checkin" placeholder="Check In" autocomplete="off" required>
+                </div>
+                {# Check-out Date #}
+                <div class="booking-field">
+                    <i class="fa fa-calendar form-icon"></i>
+                    <input type="text" name="checkout" class="booking-input js-checkout" placeholder="Check Out" autocomplete="off" required>
+                </div>
+            </div>
+            {# Row 2 #}
+            <div class="booking-row">
+                {# Adults #}
+                <div class="booking-field">
+                    <i class="fa fa-user form-icon"></i>
+                    <select name="adults" class="booking-input" required>
+                        <option value="" disabled selected>Adult</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                {# Children #}
+                <div class="booking-field">
+                    <i class="fa fa-child form-icon"></i>
+                    <select name="children" class="booking-input" required>
+                        <option value="" disabled selected>Children</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                {# Room Number #}
+                <div class="booking-field">
+                    <i class="fa fa-bed form-icon"></i>
+                    <select name="room" class="booking-input" required>
+                        <option value="" disabled selected>Room</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                {# Check Availability Button #}
+                <div class="booking-field booking-submit">
+                    <button type="submit" class="search-button">
+                        CHECK AVAILABILITY
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="booking-footer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a>Need Help?</a>
+        </div>
+    </div>
+</section>
+<section class="newsletter-subscription">
+    <div class="subscription-inner">
+        <h2>We are here to help you?</h2>
+        <p>Subscribe to get our newsletters</p>
+        <button>SUBSCRIBE NEWSLETTERS</button>
+    </div>
+</section>
+<section class="section-divider"></section>
+<section class="features-section">
+    <div class="features-container">
+        <article class="features-item">
+            <i class="fa fa-legal features-icon"></i>
+            <h3>Level HTML Template by Tooplate website</h3>
+            <p>You are allowed to download, edit and use this template for your business or client websites.</p>
+            <a>CONTINUE READING...</a>
+        </article>
+        <article class="features-item">
+            <i class="fa fa-plane features-icon"></i>
+            <h3>Original Website Template Producer</h3>
+            <p>You are NOT allowed to re-distribute the downloadable template ZIP file on any website.</p>
+            <a>CONTINUE READING...</a>
+        </article>
+        <article class="features-item">
+            <i class="fa fa-life-saver features-icon"></i>
+            <h3>Contact us if you have any question</h3>
+            <p>If you see this template being distributed on any other site, that is an illegal copy.</p>
+            <a>CONTINUE READING...</a>
+        </article>
+    </div>
+</section>
