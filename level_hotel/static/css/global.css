@@ -250,6 +250,110 @@ header {
 }
 
 /* =========================
+   SECTION DIVIDER
+========================= */
+.section-divider {
+    height: 60px;
+    background-color: #ed5057;
+    width: 100%;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    )
+}
+
+/* =========================
+   NEWSLETTER SUBSCRIPTION SECTION
+========================= */
+.newsletter-subscription {
+    padding-top: 50px;
+    background-color: #ed5057;
+    color: #ffffff;
+}
+
+.subscription-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.subscription-inner h2 {
+    font-size: 48px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.subscription-inner p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.subscription-inner button {
+    background-color: #ed5057;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 25px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features-section {
+
+
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+
+.features-item {
+    padding: 20px;
+    width: 360px;
+    text-align: center;
+}
+
+.features-item:hover {
+}
+
+.features-item i {
+    font-size: 78px;
+    color: #ed5057;
+}
+
+.features-item h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ed5057;
+}
+
+.features-item p {
+    font-size: 13px;
+    color: #888888;
+    margin-bottom: 16px;
+}
+
+.features-item a {
+    font-size: 13px;
+    color: #ed5057;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+/* =========================
     FOOTER
 ========================= */
 
