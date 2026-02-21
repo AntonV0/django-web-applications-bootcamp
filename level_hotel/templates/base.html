@@ -18,12 +18,8 @@
     <!-- Global CSS: Link using the static template tag. -->
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
 
-    <!-- Specific CSS: Link using the static template tag. -->
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/js-datepicker/dist/datepicker.min.css">
 </head>
 <body>
 
@@ -71,5 +67,13 @@
           {% endblock %}
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/js-datepicker/dist/datepicker.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          datepicker('.js-checkin', { startDay: 1 });
+          datepicker('.js-checkout', { startDay: 1 });
+      });
+    </script>
 </body>
 </html>
