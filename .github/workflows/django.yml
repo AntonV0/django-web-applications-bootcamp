@@ -15,8 +15,8 @@ jobs:
       matrix:
         python-version: ["3.12", "3.13"]
         project:
-          - 06_django_web_applications/level_hotel
-          - 06_django_web_applications/first_django_project
+          - level_hotel
+          - first_django_project
 
     steps:
       - name: Check out code
