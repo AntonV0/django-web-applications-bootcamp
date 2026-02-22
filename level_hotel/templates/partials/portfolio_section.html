@@ -16,31 +16,6 @@
     </button>
 </section>
 
-<script>
-  const video = document.getElementById("portfolioVideo");
-  const button = document.getElementById("playButton");
-  const icon = button.querySelector("i");
-
-  button.addEventListener("click", () => {
-    if (video.paused) {
-      video.play();
-      icon.classList.remove("fa-play-circle");
-      icon.classList.add("fa-pause-circle");
-    } else {
-      video.pause();
-      icon.classList.remove("fa-pause-circle");
-      icon.classList.add("fa-play-circle");
-    }
-  });
-
-  // If user pauses via native controls, keep icon in sync
-  video.addEventListener("play", () => {
-    icon.classList.remove("fa-play-circle");
-    icon.classList.add("fa-pause-circle");
-  });
-
-  video.addEventListener("pause", () => {
-    icon.classList.remove("fa-pause-circle");
-    icon.classList.add("fa-play-circle");
-  });
-</script>
+{% block scripts %}
+  <script src="{% static 'js/portfolio-video.js' %}"></script>
+{% endblock %}

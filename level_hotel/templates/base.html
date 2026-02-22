@@ -68,12 +68,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/js-datepicker/dist/datepicker.min.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          datepicker('.js-checkin', { startDay: 1 });
-          datepicker('.js-checkout', { startDay: 1 });
-      });
-    </script>
+    <script src="{% static 'js/base.js' %}"></script>
 </body>
 </html>
