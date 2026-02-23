@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'first_django_app',
     'paging_app',
-    'CRUD_app',
+    'CRUDApp'
 ]
 
 MIDDLEWARE = [
