@@ -20,5 +20,7 @@ from django.urls import path, include
 # ? New app path added to this file below:
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('first_django_app.urls'))
+    path('', include('first_django_app.urls')),
+    path("paging/", include("paging_app.urls")),
+    path("CRUD/", include("CRUD_app.urls"))
 ]

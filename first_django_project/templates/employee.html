@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Employee Data</h2>
+<table border="2">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    {% for emp in page_data %}
+        <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.age }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<div>
+    {% if page_data.has_previous %}
+        <a href="?page1">First Page</a>
+        <a href="?page={{ page_data.previous_page_number }}">Previous</a>
+    {% endif %}
+<span>
+    Page {{  page_data.number }} of {{ page_data.paginator.num_pages }}
+</span>
+
+{% if page_data.has_next %}
+    <a href="?page={{ page_data.next_page_number }}">Next</a>
+    <a href="?page={{ page_data.paginator.num_pages }}">Last Page</a>
+{% endif %}
+</div>
+</body>
+</html>

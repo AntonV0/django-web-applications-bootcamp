@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.urls import include
 
 # ? Here, we are routing using URL patterns.
 # When the user visits the root URL (''), the home view will be called.
@@ -9,6 +10,7 @@ from . import views
 urlpatterns = [
     # Dynamic URL pattern with parameters (name1 and place1) that will be passed to the home view.
     # e.g. http://127.0.0.1:8000/home/Anton/United%20Kingdom/ will pass "Anton" as name1 and "United Kingdom" as place1.
+    path("", views.index, name="index"),
     path('home/<str:name1>/<str:place1>/', views.home, name='home1'),
     path('about/', views.about, name='about1'),
     path('contact/', views.contact, name='contact1'),

@@ -30,6 +30,9 @@ def home(request, name1, place1):
     #  HttpResponse object with that rendered text. In this case, we are rendering the home.html template without any
     #  context data.
 
+def index(request):
+    return HttpResponse("Homepage")
+
 def about(request):
     all_data = Employee.objects.all()
     # This will display output in the console:
