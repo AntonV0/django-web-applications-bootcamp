@@ -232,3 +232,19 @@
 # To create credentials for Admin panel:
 # python manage.py createsuperuser
 # python manage.py runserver
+
+# ? --------------------------------------------------------------------------------------------------------------------
+
+# ? Using shell in Django:
+# python manage.py shell
+
+# In the shell, you can import your models and interact with the database directly using Python code. For example:
+# >>> from paging_app.models import EmployeePage
+# >>> for i in range(1, 31):
+# ...     EmployeePage.objects.create(name=f"Emp {i}", age=20+i)
+# ...
+
+# ? Output:
+# <EmployeePage: Emp 1>
+# <EmployeePage: Emp 2>
+# etc...
