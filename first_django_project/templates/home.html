@@ -31,12 +31,14 @@
 <body>
 <h1>Welcome to the Homepage</h1>
 <div id="menu">
-<button><a href="{% url 'about' %}">About Us</a></button>
-<button><a href="{% url 'contact' %}">Contact Us</a></button>
+<button><a href="{% url 'about1' %}">About Us</a></button>
+<button><a href="{% url 'contact1' %}">Contact Us</a></button>
 </div>
 <br/>
 <h2>User Details:</h2>
 <h3>{{ name }}</h3>
 <h3>{{ place }}</h3>
+<h2>-- Data From Class View --</h2>
+<h4>The message is: {{  message  }}</h4>
 </body>
 </html>
