@@ -6,11 +6,23 @@
 </head>
 <body>
 <h3>Display Employee Data:</h3>
-{% for i in data %}
-<h4>{{ i.E_name }}</h4>
-<h4>{{ i.E_id }}</h4>
-<h4>{{ i.E_address }}</h4>
-<h4>{{ i.E_salary }}</h4>
+<table border="2">
+    <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Address</th>
+        <th>Salary</th>
+    </tr>
+    {% for i in data %}
+        <tr>
+            <td>{{ i.E_name }}</td>
+            <td>{{ i.E_id }}</td>
+            <td>{{ i.E_address }}</td>
+            <td>{{ i.E_salary }}</td>
+            <td><a href="{% url "update" i.E_id %}">Update</a></td>
+            <td><a href="{% url "delete" i.E_id %}">Delete</a></td>
+        </tr>
 {% endfor %}
+</table>
 </body>
 </html>
