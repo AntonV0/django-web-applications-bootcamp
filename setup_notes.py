@@ -248,3 +248,78 @@
 # <EmployeePage: Emp 1>
 # <EmployeePage: Emp 2>
 # etc...
+
+# ? --------------------------------------------------------------------------------------------------------------------
+
+# ? APIs (Application Programming Interfaces):
+# APIs are a set of rules and protocols that allow different software applications to communicate with each other.
+# They define how requests and responses should be structured, and what data can be accessed or manipulated.
+
+
+# ? Example - WhatsApp API:
+# WhatsApp provides an API that allows developers to integrate WhatsApp messaging into their applications.
+# This API defines how to send and receive messages, manage contacts, and perform other actions related to WhatsApp.
+# By using the WhatsApp API, developers can create applications that interact with WhatsApp users and provide
+# additional functionality beyond what the WhatsApp app itself offers.
+
+# WhatsApp is a hybrid application, meaning that it uses a combination of native code and web technologies to provide
+# its functionality.
+
+# It has a mobile app, desktop app, web app, and an API for developers to integrate with.
+# The mobile and desktop apps are built using native code, while the web app is built using web technologies like HTML,
+# CSS, and JavaScript. This hybrid approach allows WhatsApp to provide a seamless user experience across different
+# platforms while also enabling developers to extend its functionality through the API.
+
+# ? --------------------------------------------------------------------------------------------------------------------
+
+# ? REST (Representational State Transfer) API:
+# - Representational: The API represents resources (data) in a specific format, such as JSON or XML.
+# - State: The API allows clients to manipulate the state of resources on the server through standard HTTP methods
+# (GET, POST, PUT, DELETE).
+# - Transfer: The API allows clients to transfer data between the client and server using standard HTTP protocols.
+
+# In Django, you can create APIs using Django REST Framework (DRF), which provides tools and features for building
+# RESTful APIs. With DRF, you can define serializers to convert your data models into JSON format, and you can create
+# views to handle API requests and responses. You can also use DRF's built-in authentication and permissions features
+# to secure your APIs and control access to your data.
+
+# ? --------------------------------------------------------------------------------------------------------------------
+
+# ? APIs consist of:
+# - Endpoints: URLs that clients can access to interact with the API.
+# - View (logic): The code that handles the requests and responses for each endpoint, defining the behaviour of the API.
+# - Serialisers (data conversion): The code that converts complex data types (like Django models) into a format that can
+# be easily rendered into JSON or XML, and vice versa.
+# - Model (database): The data structure that defines how data is stored and accessed in the database.
+
+# ? --------------------------------------------------------------------------------------------------------------------
+
+# ? URLs consist of 5 parts:
+# 1. Protocol: The protocol used to access the resource (e.g., http, https).
+# 2. Domain: The domain name or IP address of the server hosting the resource (e.g., www.example.com).
+# 3. Port: The port number on which the server is listening for requests (e.g., :8000).
+# 4. Path: The specific location of the resource on the server (e.g., /api/v1/resource/).
+# 5. Query Parameters: Optional parameters that can be included in the URL to provide additional information or filter
+# results (e.g., ?search=keyword).
+
+# ? --------------------------------------------------------------------------------------------------------------------
+
+# ? HTTP requests consist of:
+# 1. Method: The HTTP method used for the request (e.g., GET, POST, PUT, DELETE).
+# 2. URL: The URL to which the request is being sent, including the protocol, domain, port, path, and query parameters.
+# 3. Headers: Additional information sent with the request, such as authentication tokens, content type, API keys, etc.
+# 4. Body: The data sent with the request, typically in JSON format for APIs, which contains the information needed to
+# perform the requested action (e.g., creating a new resource, updating an existing resource, etc.).
+
+# ? Example website URL: https://www.example.com:8000/api/v1/resource/?search=keyword
+# ? Example API request:
+# POST https://www.example.com:8000/api/v1/resource/
+# Headers:
+# Content-Type: application/json
+# Authorization: Bearer <token>
+# Body:
+# {
+#     "name": "New Resource",
+#     "description": "This is a new resource created through the API."
+# }
+
