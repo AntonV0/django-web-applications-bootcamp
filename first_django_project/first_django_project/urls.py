@@ -21,7 +21,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('first_django_app.urls')),
-    path("paging/", include("paging_app.urls")),
-    path("CRUD/", include("CRUDApp.urls")),
-    path("classview/", include("classViewApp.urls"))
+    path('paging/', include("paging_app.urls")),
+    path('CRUD/', include("CRUDApp.urls")),
+    path('classview/"', include("classViewApp.urls")),
+    path('restapi/', include("restAPIApp.urls")),
 ]
